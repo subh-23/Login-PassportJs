@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <% if (messages.error) { %>
+        <%= messages.error %>
+            <% } %>
+                <div class="container">
+                    <form class="form-1" action="/login" method="POST" >
+                        <h1>Login</h1>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required />
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required />
+                        <!-- <span>Forgot Password</span> -->
+                        <button type="submit">Login</button>
+
+                        <!-- .........///sign-up///.......... -->
+
+                        <p>Sign Up</p>
+                        <div class="icons">
+                            <a href="/register" target="blank"><i class="fab fa-twitter"></i></a>
+                            <a href="/register" target="blank"><i class="fab fa-google"></i></a>
+                        </div>
+                    </form>
+                </div>
+</body>
+
+</html>
